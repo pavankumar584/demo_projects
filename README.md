@@ -1,11 +1,5 @@
 #Password Generator
 
-What is a Password Generator:
-
-A password generator is a program or tool that automatically creates a random and secure password.
-It helps users generate strong passwords that are difficult to guess or crack, enhancing their online security.
-Password generators typically allow users to specify the desired length, character types (uppercase, lowercase, numbers, and special characters), and other customization options.
-
 Explanation of the Code:
 
 The code starts by defining three lists: alphabete, number, and special_charecter. These lists contain the characters that can be included in the password.
