@@ -1,34 +1,20 @@
-# Calculating electrical bill using the python programming
 
-# 1 to 100 units - 1.5Rs
-# 101 to 200 units - 2.5Rs
-# 201 to 300 units - 4Rs
-# 300 to 350 units - 5Rs
-# Above 350 - Fixed charge 1500Rs
 
-try:
-    units = float(input("Enter the Unit Consumed: "))
-    if units <= 0:
-        raise ValueError("Unit consumed should be a positive value.")
-except ValueError:
-    print("Invalid input. Please enter a positive numeric value for units consumed.")
-    exit()
+The code prompts the user to enter the number of units consumed.
+It performs input validation to ensure that the entered value is a positive number.
+Based on the number of units consumed, the code calculates the electricity bill using a slab system:
 
-if units > 0 and units <= 100:
-    payment = units * 1.5
-    fixedCharge = 25  # Extra charge
-elif units > 100 and units <= 200:
-    payment = (100 * 1.5) + (units - 100) * 2.5
-    fixedCharge = 50  # Extra charge
-elif units > 200 and units <= 300:
-    payment = (100 * 1.5) + (200 - 100) * 2.5 + (units - 200) * 4
-    fixedCharge = 75  # Extra charge
-elif units > 300 and units <= 350:
-    payment = (100 * 1.5) + (200 - 100) * 2.5 + (300 - 200) * 4 + (units - 300) * 5
-    fixedCharge = 100  # Extra charge
-else:
-    payment = 0
-    fixedCharge = 1500
+For the first 100 units, the rate is 1.5 rupees per unit.
+For units between 101 and 200, the rate is 2.5 rupees per unit.
+For units between 201 and 300, the rate is 4 rupees per unit.
+For units between 301 and 350, the rate is 5 rupees per unit.
+For units above 350, there is a fixed charge of 1500 rupees.
 
-total = payment + fixedCharge
-print(f"Your Electricity Bill amount is {total:.2f}")
+
+In addition to the consumption charge, there is a fixed charge (25, 50, 75, or 100 rupees) based on the number of units consumed.
+The code calculates the total bill by adding the consumption charge and the fixed charge.
+Finally, it displays the total electricity bill amount to the user.
+
+In summary, this code automates the calculation of electricity bills based on a predefined slab system, taking into account both the
+number of units consumed and fixed charges. It provides a convenient way to determine the electricity bill amount without manually performing 
+the calculations.
